@@ -94,6 +94,7 @@ install_nse_systemd() {
 
     # /etc/janus/nse.env (idempotent — only seeds, never overwrites)
     mkdir -p "$JANUS_ENV_DIR"
+    chown root:"$JANUS_USER" "$JANUS_ENV_DIR"
     chmod 750 "$JANUS_ENV_DIR"
     if [[ ! -f "$JANUS_ENV_DIR/nse.env" ]]; then
         echo "  Seeding $JANUS_ENV_DIR/nse.env (you must fill API_AUTH_TOKEN before starting)…"
