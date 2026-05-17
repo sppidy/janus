@@ -11,6 +11,9 @@ on:
       - '.github/workflows/android-build.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # Signing secrets used: RELEASE_KEYSTORE_BASE64, RELEASE_STORE_PASSWORD,
 # RELEASE_KEY_ALIAS, RELEASE_KEY_PASSWORD.
 
